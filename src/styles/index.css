@@ -22,11 +22,15 @@
     0 0 2px var(--color-white),
     0 0 40px var(--color-blue);
   
+  --spacing-very-small: 5px;
   --spacing-small: 10px;
   --spacing-medium: 20px;
   --spacing-large: 30px;
 
+  --margin-list: 7px;
+
   --border-radius-small: 3px;
+  --border-radius-medium: 5px;
 
   --transition: 0.4s;
 
@@ -46,6 +50,17 @@ body {
   background-repeat: no-repeat;
   background-position: top left;
   background-attachment: fixed;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .header__text {
