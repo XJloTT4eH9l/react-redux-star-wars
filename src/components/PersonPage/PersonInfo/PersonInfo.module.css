@@ -7,10 +7,6 @@
     color: var(--color-white);
 }
 
-.list__container {
- 
-}
-
 .list__item {
     padding: var(--spacing-very-small);
     margin-bottom: var(--margin-list);

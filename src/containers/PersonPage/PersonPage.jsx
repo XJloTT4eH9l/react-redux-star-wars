@@ -8,6 +8,7 @@ import { getPeopleImage } from '@services/getPeopleData';
 
 import PersonInfo from '@components/PersonPage/PersonInfo';
 import PersonPhoto from '@components/PersonPage/PersonPhoto';
+import PersonLinkBack from '@components/PersonPage/PersonLinkBack';
 
 import styles from './PersonPage.module.css';
 
@@ -42,6 +43,7 @@ const PersonPage = ({ setErrorApi }) => {
     }, [])
     return (
         <>
+            <PersonLinkBack />
             <div className={styles.wrapper}>
                 <h1 className={styles.person__name}>{personName}</h1>
 
