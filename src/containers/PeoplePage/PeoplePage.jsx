@@ -3,8 +3,11 @@ import { useState, useEffect } from 'react';
 import { getApiResourse } from '@utils/network';
 import { API_PEOPLE } from '@constants/api';
 import { getPeopleId, getPeopleImage, getPeoplePageId } from '@services/getPeopleData';
+
 import PeopleList from '@components/PeoplePage/PeopleList';
 import PeopleNavigation from '@components/PeoplePage/PeopleNavigation';
+import UiLoading from '@components/UI/UiLoading/UiLoading';
+
 import { withErrorApi } from '@hoc/withErrorApi';
 import { useQuaryParams } from '@hooks/useQuaryParams';
 
@@ -15,11 +18,13 @@ const PeoplePage = ({ setErrorApi }) => {
     const [prevPage, setPrevPage] = useState(null);
     const [nextPage, setNextPage] = useState(null);
     const [counterPage, setCounterPage] = useState(1);
+    const [loading, setLoading] = useState(false);
 
     const query = useQuaryParams();
     const queryPage = query.get('page');
 
     const getResourse = async (url) => {
+        setLoading(true);
         const res = await getApiResourse(url);
 
         if(res) {
@@ -42,6 +47,8 @@ const PeoplePage = ({ setErrorApi }) => {
         } else {
             setErrorApi(true);
         }
+
+        setLoading(false);
     }
 
     useEffect(() => {
@@ -56,7 +63,8 @@ const PeoplePage = ({ setErrorApi }) => {
                 nextPage={nextPage}
                 counterPage={counterPage} 
             />
-            {people && <PeopleList people={people} />}
+            {loading ? <UiLoading /> : people && <PeopleList people={people} />}
+            
         </>
     )
 }

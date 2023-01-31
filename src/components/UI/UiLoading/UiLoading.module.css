@@ -1,0 +1,13 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.loader {
+    width: 120px;
+    height: 120px;
+}
+
+.shadow {
+    filter: drop-shadow(0 0 2px color #000);
+}

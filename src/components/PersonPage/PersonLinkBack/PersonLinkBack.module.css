@@ -7,6 +7,10 @@
     text-decoration: none;
 }
 
+.link:hover {
+    cursor:pointer;
+}
+
 .link__img {
     width: 30px;
     height: 30px;
