@@ -2,4 +2,16 @@
     --color-white: #fff;
     --color-black: #000;
     --color-gray: #9c9c9c;
+    --color-lightGrey: #dfe2df;
+    --color-blue: #6a83fb;
+}
+
+*, 
+*:after, 
+*:before {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
 }
