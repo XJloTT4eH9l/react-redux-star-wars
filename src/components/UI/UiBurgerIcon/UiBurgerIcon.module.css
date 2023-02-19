@@ -1,0 +1,36 @@
+.burger {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 100;
+    padding: 2px;
+}
+
+.burger__active .burger__item:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.burger__active .burger__item:nth-child(2) {
+    opacity: 0;
+}
+
+.burger__active .burger__item:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.burger__item {
+    display: block;
+    width: 28px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--color-white);
+    transition: var(--transition);
+}
+
+
+@media screen and (max-width: 700px) {
+    .burger {
+        display: block;
+    }
+}

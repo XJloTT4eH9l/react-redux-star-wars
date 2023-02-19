@@ -1,5 +1,5 @@
 .text {
-    width: 600px;
+    max-width: 600px;
     margin: auto;
     margin-top: 100px;
     line-height: 1.7;
@@ -19,4 +19,23 @@
     margin-top: var(--spacing-large);
     border-radius: var(--border-radius-medium);
     box-shadow: var(--box-shadow-white);
+}
+
+@media screen and (max-width: 560px) {
+    .text {
+        font-size: 22px;
+    }
+    .video {
+        width: 350px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .text {
+        font-size: 20px;
+    }
+    .video {
+        width: 300px;
+    }
 }
