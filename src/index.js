@@ -13,7 +13,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <ThemeProvider>
-          <BrowserRouter basename='/'>
+          <BrowserRouter basename='/react-redux-star-wars/'>
             <App />
           </BrowserRouter>
       </ThemeProvider>

@@ -16,6 +16,8 @@ const UiBurgerIcon = ({ burgerOpen, setBurgerOpen }) => {
         <button 
             className={burgerOpen ? cn(styles.burger, styles.burger__active) : styles.burger}
             onClick={burgerHandler}
+            aria-label='burger-button'
+            aria-labelledby='burger-button'
         >
             <span className={styles.burger__item}></span>
             <span className={styles.burger__item}></span>
